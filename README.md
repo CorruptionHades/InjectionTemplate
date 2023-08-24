@@ -11,6 +11,6 @@ Wrappers are helpers to get/change fields and execute methods in a class.
 I have provided some examples in the code to get you going. There is also a Main class for injecting 
 this Agent into a target program. If you wish to use this Template you need to put it on github and licence it under the GNU GENERAL PUBLIC LICENSE 3.0.
 
-Please do not changet he package name as it will cause issues with minecrafts default package obfuscation.
+Please do not change the package name as it will cause issues with minecrafts default package obfuscation.
 
 If you have questions join this discord: https://discord.gg/TsdAuxxraU
