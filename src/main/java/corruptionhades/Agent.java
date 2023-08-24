@@ -3,16 +3,13 @@ package corruptionhades;
 import corruptionhades.hook.HookManager;
 import corruptionhades.module.Module;
 import corruptionhades.module.ModuleManager;
-import corruptionhades.utils.ServerListener;
 
 import java.lang.instrument.Instrumentation;
 import java.net.Socket;
 
 public class Agent {
 
-    public static final int port = 54321;
     public static Instrumentation instrumentation = null;
-    public static Socket socket = null;
 
     public static void agentmain(String args, Instrumentation instrumentation) throws Exception {
         System.out.println("----- Started Java Injection Client -----");
@@ -22,11 +19,6 @@ public class Agent {
 
         HookManager hookManager = new HookManager();
         hookManager.registerHooks();
-
-        // Connect to the server
-        socket = new Socket("localhost", port);
-        System.out.println("Connected!");
-        new Thread(new ServerListener(socket)).start();
 
         // OnUpdate thread for modules
         while (!Thread.interrupted()) {
