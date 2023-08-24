@@ -2,14 +2,14 @@ package corruptionhades.hook.impl;
 
 import corruptionhades.hook.Hook;
 import corruptionhades.hook.IMethodHook;
-import corruptionhades.injection.misc.Classes;
 import corruptionhades.utils.CodeInjection;
+import corruptionhades.utils.ReflectionHelper;
 
 public class ExampleHook extends Hook {
 
     public ExampleHook() {
         // Our target class to hook into
-        super(Classes.inGameHud);
+        super(ReflectionHelper.getClass("eow"));
     }
 
     // Add a new method hook, with the method name, location, and params in obfuscated class names

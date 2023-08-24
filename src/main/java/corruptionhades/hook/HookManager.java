@@ -17,7 +17,6 @@ public class HookManager {
     }
 
     private void init() {
-
         // Add your hooks here
         addHook(new ExampleHook());
     }

@@ -5,7 +5,6 @@ import corruptionhades.module.Module;
 import corruptionhades.module.ModuleManager;
 
 import java.lang.instrument.Instrumentation;
-import java.net.Socket;
 
 public class Agent {
 
